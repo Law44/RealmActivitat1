@@ -1,0 +1,12 @@
+2.
+No he tenido ningun error ya que he creado de 0 la aplicación.
+
+3.
+@Required-> Marcara el campo como que no puede ser nulo.
+@Ignore-> Ignorara el campo y no es cargara en la base de datos de Realm.
+@Index-> Añadira un index de busqueda al campo.
+@PrimatyKey-> Marcara el campo como clave primaria.
+
+4.
+Usando una primary key que sea unica de verdad, hara que puedas identificar y encontrar rapidamente un elemento de la lista y
+asi eliminarlo solo introduciendo un campo. Si puedes usar varios campos como PrimaryKey
