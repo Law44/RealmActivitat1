@@ -10,3 +10,5 @@ No he tenido ningun error ya que he creado de 0 la aplicación.
 4.
 Usando una primary key que sea unica de verdad, hara que puedas identificar y encontrar rapidamente un elemento de la lista y
 asi eliminarlo solo introduciendo un campo. Si puedes usar varios campos como PrimaryKey
+
+Para modificar o borrar un elemento, al darle a listar, puedes clicar en el item directamente para acceder a estas opciones.
