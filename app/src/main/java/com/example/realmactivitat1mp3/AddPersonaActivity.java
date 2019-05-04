@@ -26,15 +26,15 @@ public class AddPersonaActivity extends AppCompatActivity {
         etSurname = findViewById(R.id.etSurname);
         etAge = findViewById(R.id.etAge);
 
-        String[] arraySpinner = new String[] {
+        String[] opcionesSpinner = new String[] {
                 "Hombre", "Mujer", "Otro" };
-        Spinner s = findViewById(R.id.etGender);
+        Spinner spinner = findViewById(R.id.etGender);
         ArrayAdapter<String> spinneroptions = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, arraySpinner);
+                android.R.layout.simple_spinner_item, opcionesSpinner);
         spinneroptions.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        s.setAdapter(spinneroptions);
+        spinner.setAdapter(spinneroptions);
 
-        s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 gender = String.valueOf(parent.getSelectedItem());

@@ -27,13 +27,13 @@ public class ModifyPersonaActivity extends AppCompatActivity {
         etSurname = findViewById(R.id.etSurname);
         etAge = findViewById(R.id.etAge);
 
-        String[] arraySpinner = new String[] {
+        String[] opcionesSpinner = new String[] {
                 "Hombre", "Mujer", "Otro" };
-        Spinner s = findViewById(R.id.etGender);
+        Spinner spinner = findViewById(R.id.etGender);
         ArrayAdapter<String> spinneroptions = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, arraySpinner);
+                android.R.layout.simple_spinner_item, opcionesSpinner);
         spinneroptions.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        s.setAdapter(spinneroptions);
+        spinner.setAdapter(spinneroptions);
 
 
         final String nom = getIntent().getStringExtra("ModificarNombre");
@@ -41,9 +41,9 @@ public class ModifyPersonaActivity extends AppCompatActivity {
         final String edat = getIntent().getStringExtra("ModificarEdat");
         final String genere = getIntent().getStringExtra("ModificarGenere");
 
-        for (int i = 0; i < arraySpinner.length; i++) {
-            if (arraySpinner[i].equals(genere)){
-                s.setSelection(i);
+        for (int i = 0; i < opcionesSpinner.length; i++) {
+            if (opcionesSpinner[i].equals(genere)){
+                spinner.setSelection(i);
             }
         }
 
@@ -51,7 +51,7 @@ public class ModifyPersonaActivity extends AppCompatActivity {
         etSurname.setText(cognom);
         etAge.setText(edat);
 
-        s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 gender = String.valueOf(parent.getSelectedItem());
